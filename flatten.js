@@ -41,8 +41,10 @@ const flatten  = function(arr1) {
 };
 
 console.log(flatten([1, 2, [3, 4], 5, [6]])); // => [1, 2, 3, 4, 5, 6]
+// passed
 
 const anArray = [1, [2, 3], 4, [5]];
 const theOutput = flatten(anArray);
 const expected = [1, 2, 3, 4, 5];
 assertArraysEqual(theOutput, expected);
+// passed
