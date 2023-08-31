@@ -22,7 +22,7 @@ const assertArraysEqual = function(actual, expected) {
 };
 
 
-const without = function(source, itemsToRemove) {
+/* const without = function(source, itemsToRemove) {
   const filteredArray = []; // creates an empty array to copy the final elements into after being filtered
     
   for (const item of source) { // for each item in the array
@@ -38,6 +38,11 @@ const without = function(source, itemsToRemove) {
     } // if an item to remove is not found in the array, it is added to the array
   }
     
+  return filteredArray; // returns the array
+}; */
+
+const without = function(source, itemsToRemove) {
+  const filteredArray = source.filter(item => !itemsToRemove.includes(item)); // creates a shallow copy of a filtered part of the given array by searching through the array and identifying the elements present in both parameters
   return filteredArray; // returns the array
 };
 
